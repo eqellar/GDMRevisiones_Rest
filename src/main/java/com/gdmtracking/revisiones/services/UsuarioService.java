@@ -14,8 +14,6 @@ public class UsuarioService {
 	
 	@Autowired //Etiqueta que hace que Spring sepa que existe una instacia de la variable y la use cuando la requiera
 	UsuarioRepository usuarioRepository;//Declaramos el repositorio de usuario como una variable
-
-	
 	
 	
 	public ArrayList<UsuarioModel> obtenerUsuarios(){//Método que regresa varios objetos de tipo UsuarioModel
@@ -29,7 +27,7 @@ public class UsuarioService {
 	
 	
 	public Optional<UsuarioModel> obtenerPorId(Long id_usuario){//Método que busca por id_usuario, el método sedefine como optional por si no existiera el id que se busca
-		return usuarioRepository.findById(id_usuario);
+		return usuarioRepository.findById(id_usuario); // Le pasamos como parametru el id que queremos guardar, el metodo save lo guarda y a la vez lo regresa pero ya con un id asignado
 		
 	}
 	
